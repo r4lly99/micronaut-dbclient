@@ -1,0 +1,5 @@
+micronaut:
+  application:
+    name: micronautDbclient
+mongodb:
+  uri: mongodb://rully:secret@localhost:27017/micronaut
