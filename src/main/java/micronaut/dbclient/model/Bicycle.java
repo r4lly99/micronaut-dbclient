@@ -1,8 +1,10 @@
 package micronaut.dbclient.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.micronaut.core.annotation.Introspected;
 import org.bson.types.ObjectId;
 
+@Introspected
 public class Bicycle {
 
     @JsonIgnore
@@ -81,5 +83,18 @@ public class Bicycle {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Bicycle{" +
+                "id=" + id +
+                ", brand='" + brand + '\'' +
+                ", name='" + name + '\'' +
+                ", gear=" + gear +
+                ", type=" + type +
+                ", colour='" + colour + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
